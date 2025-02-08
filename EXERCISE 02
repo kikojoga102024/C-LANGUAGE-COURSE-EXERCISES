@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main() {
+	printf("Meu\n");
+	printf("\tsegundo\n");
+	printf("\t\tprograma\n");
+	printf("\t\t\tem linguagem C\n");
+	return 0;
+}
