@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main() {
+	printf("Alexandre Araujo de Lemos\n");
+	printf("Maria Jose Pedro de Araujo\n");
+	printf("Olindina Januaria de Lemos\n");
+	return 0;
+}
