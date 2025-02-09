@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+int main() {
+	char resposta = 's';
+	float n1, n2, n3, media;
+	n1 = n2 = n3 = media = 0;
+	while (resposta == 's') {
+		printf("Informe a primeira nota: ");
+		scanf_s("%f", &n1);
+		printf("Informe a segunda nota: ");
+		scanf_s("%f", &n2);
+		printf("Informe a terceira nota: ");
+		scanf_s("%f", &n3);
+		media = (n1 + n2 + n3) / 3;
+		printf("A media do aluno = %.2f\n", media);
+		if (media >= 6) {
+			printf("Aprovado\n");
+		}
+		else {
+			printf("Reprovado\n");
+		}
+		printf("Deseja calcular mais alguma media?\n");
+		resposta = _getche();
+		system("cls");
+	}
+	return 0;
+}
