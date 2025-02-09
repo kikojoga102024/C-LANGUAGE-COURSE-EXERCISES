@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+	int numero, positivo, negativo;
+	numero = 1;
+	positivo = negativo = 0;
+	printf("Escreva valores ate que seja digitado o numero 0. Ao final informe:\n\na soma dos positivos;\na soma dos negativos.\n\n");
+	while (numero != 0) {
+		scanf_s("%d", &numero);
+		if (numero > 0) {
+			positivo = positivo + numero;
+		}
+		else {
+			negativo = negativo + numero;
+		}
+	}
+	printf("A soma dos negativos = %d\n", positivo);
+	printf("A soma dos negativos = %d\n", negativo);
+	return 0;
+}
