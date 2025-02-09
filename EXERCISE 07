@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+	float raio, altura, volume;
+	raio = 3;
+	altura = 10;
+	volume = 3.14159 * raio * raio * altura;
+	printf("O volume do objeto = %.5f\n", volume);
+	return 0;
+}
