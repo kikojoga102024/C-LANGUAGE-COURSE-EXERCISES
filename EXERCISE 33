@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+int main() {
+	int estadoCivil, idadeSolteiro, idadeCasado, idadeDivorciado, qtdSolteiro, qtdCasado, qtdDivorciado, somaSolteiro, somaCasado, somaDivorciado;
+	estadoCivil = idadeSolteiro = idadeCasado = idadeDivorciado = qtdSolteiro = qtdCasado = qtdDivorciado = somaSolteiro = somaCasado = somaDivorciado = 0;
+	float mediaSolteiro, mediaCasado, mediaDivorciado;
+	mediaSolteiro = mediaCasado = mediaDivorciado = 0;
+	char resposta = 's';
+	while (resposta == 's') {
+		printf("Menu de opcoes:\n\n");
+		printf("1 - Solteiro\n");
+		printf("2 - Casado\n");
+		printf("3 - Divorciado\n\n");
+		printf("Informe o estado civil: ");
+		scanf_s("%d", &estadoCivil);
+		switch (estadoCivil) {
+		case 1:
+			printf("Solteiro\n");
+			printf("Informe a idade: ");
+			scanf_s("%d", &idadeSolteiro);
+			qtdSolteiro++;
+			somaSolteiro += idadeSolteiro;
+			mediaSolteiro = (float) somaSolteiro / qtdSolteiro;
+			break;
+		case 2:
+			printf("Casado\n");
+			printf("Informe a idade: ");
+			scanf_s("%d", &idadeCasado);
+			qtdCasado++;
+			somaCasado += idadeCasado;
+			mediaCasado = (float) somaCasado / qtdCasado;
+			break;
+		case 3:
+			printf("Divorciado\n");
+			printf("Informe a idade: ");
+			scanf_s("%d", &idadeDivorciado);
+			qtdDivorciado++;
+			somaDivorciado += idadeDivorciado;
+			mediaDivorciado = (float) somaDivorciado / qtdDivorciado;
+			break;
+		default:
+			printf("Codigo invalido\n");
+			break;
+		}
+		printf("Deseja saber mais algum estado civil?\n");
+		resposta = _getche();
+		system("cls");
+	}
+	printf("A media de idade dos solteiros = %.2f\n", mediaSolteiro);
+	printf("A media de idade dos casados = %.2f\n", mediaCasado);
+	printf("A media de idade dos divorciados = %.2f\n", mediaDivorciado);
+	return 0;
+}
