@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+	double receita, lucro, despesa;
+	printf("Informe os lucros da empresa: ");
+	scanf_s("%lf", &lucro);
+	printf("Informe as despesas da empresa: ");
+	scanf_s("%lf", &despesa);
+	receita = lucro - despesa;
+	printf("A receita da empresa = R$ %.2lf\n", receita);
+	return 0;
+}
