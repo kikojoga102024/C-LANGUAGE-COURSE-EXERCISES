@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main() {
+	int numero, qtd;
+	numero = qtd = 0;
+	printf("Escreva valores ate que seja digitado um numero negativo.\nAo final informe a quantidade de numeros digitados.\n\n");
+	while (numero >= 0) {
+		scanf_s("%d", &numero);
+		qtd++;
+	}
+	printf("A quantidade de numeros digitados = %d\n", qtd);
+	return 0;
+}
