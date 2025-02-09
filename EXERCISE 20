@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() {
+	int qtdHoras, qtdFilhos;
+	float salarioBruto, salarioFamilia, salarioLiquido, salarioHora, valorFilho;
+	printf("Informe o salario hora: ");
+	scanf_s("%f", &salarioHora);
+	printf("Informe a quantidade de horas: ");
+	scanf_s("%d", &qtdHoras);
+	printf("Informe a quantidade de filhos: ");
+	scanf_s("%d", &qtdFilhos);
+	salarioBruto = salarioHora * qtdHoras;
+	if (salarioBruto <= 700) {
+		valorFilho = 8.50;
+	}
+	else if (salarioBruto <= 1000) {
+		valorFilho = 6.50;
+	}
+	else {
+		valorFilho = 2.50;
+	}
+	salarioFamilia = (float)valorFilho * qtdFilhos;
+	salarioLiquido = salarioBruto + salarioFamilia;
+	printf("O salario liquido do professor = R$ %.2f\n", salarioLiquido);
+	return 0;
+}
