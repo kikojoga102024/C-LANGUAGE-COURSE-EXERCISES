@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+int main() {
+	int codigo, incluir, totalEntrada, totalSaida;
+	incluir = totalEntrada = totalSaida = 0;
+	do {
+		system("cls");
+		printf("Menu de opcoes:\n\n");
+		printf("0 - Encerrar programa\n");
+		printf("1 - Incluir uma unidade do estoque\n");
+		printf("2 - Excluir uma unidade do estoque\n");
+		printf("3 - Mostrar o total disponivel no estoque\n");
+		printf("4 - Mostrar o total de entradas no estoque\n");
+		printf("5 - Mostrar o total de saidas do estoque\n\n");
+		printf("Digite a opcao:\n");
+		scanf_s("%d", &codigo);
+		switch (codigo) {
+		case 0:
+			printf("Encerrar programa\n");
+			break;
+		case 1:
+			printf("Incluir uma unidade no estoque\n");
+			incluir++;
+			totalEntrada++;
+			break;
+		case 2:
+			printf("Excluir uma unidade no estoque\n");
+			if (incluir == 0) {
+				printf("Nao ha itens para excluir\n");
+			}
+			else {
+				incluir--;
+				totalSaida++;
+			}
+			break;
+		case 3:
+			printf("Mostrar o total disponivel no estoque = %d\n", incluir);
+			break;
+		case 4:
+			printf("Mostrar o total de entradas no estoque = %d\n", totalEntrada);
+			break;
+		case 5:
+			printf("Mostrar o total de saidas no estoque = %d\n", totalSaida);
+			break;
+		default:
+			printf("Codigo invalido\n");
+			break;
+		}
+		system("pause");
+	} while (codigo != 0);
+	return 0;
+}
