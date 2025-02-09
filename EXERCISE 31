@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+int main() {
+	char resposta = 's';
+	int numero, soma, qtd;
+	numero = soma = qtd = 0;
+	float media = 0;
+	printf("Escreva alguns numeros e, ao final, informe a media dos numeros lidos.\n\n");
+	while (resposta == 's') {
+		scanf_s("%d", &numero);
+		qtd++;
+		soma = soma + numero;
+		media = (float) soma / qtd;
+		printf("Mais algum numero?\n");
+		resposta = _getche();
+		printf("\n\n");
+	}
+	printf("A media dos numeros lidos = %.2f\n", media);
+	return 0;
+}
