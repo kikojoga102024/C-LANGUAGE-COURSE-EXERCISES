@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+	double lucro, despesa, receita;
+	printf("Informe os lucros da empresa: ");
+	scanf_s("%lf", &lucro);
+	printf("Informe as despesas da empresa: ");
+	scanf_s("%lf", &despesa);
+	receita = lucro - despesa;
+	if (receita > 0) {
+		printf("Lucro\n");
+	}
+	else {
+		printf("Prejuizo\n");
+	}
+	return 0;
+}
