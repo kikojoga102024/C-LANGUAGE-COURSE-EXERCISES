@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+	int numero;
+	printf("Digite um numero: ");
+	scanf_s("%d", &numero);
+	if (numero == 1000) {
+		printf("Eh igual a 1000\n");
+	}
+	else {
+		printf("Eh diferente de 1000\n");
+	}
+	return 0;
+}
