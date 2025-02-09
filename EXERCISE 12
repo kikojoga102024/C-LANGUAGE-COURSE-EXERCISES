@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+	int anoNascimento, idade, dias, horas, minutos, segundos;
+	printf("Informe o ano de nascimento: ");
+	scanf_s("%d", &anoNascimento);
+	idade = 2025 - anoNascimento;
+	dias = idade * 365;
+	horas = dias * 24;
+	minutos = horas * 60;
+	segundos = minutos * 60;
+	printf("A idade da pessoa = %d\n", idade);
+	printf("Os dias vividos pela pessoa = %d\n", dias);
+	printf("As horas vividas pela pessoa = %d\n", horas);
+	printf("Os minutos vividos pela pessoa = %d\n", minutos);
+	printf("Os segundos vividos pela pessoa = %d\n", segundos);
+	return 0;
+}
