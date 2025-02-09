@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main(){
+	int numero;
+	printf("Informe um numero: ");
+	scanf_s("%d", &numero);
+	if (numero > 1000) {
+		printf("Eh maior do que mil (%d)\n", numero);
+	}
+	return 0;
+}
