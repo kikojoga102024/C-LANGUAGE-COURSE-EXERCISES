@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+	int quilometragemInicial, quilometragemFinal, distanciaPercorrida;
+	quilometragemInicial = 200000;
+	quilometragemFinal = 207789;
+	distanciaPercorrida = quilometragemFinal - quilometragemInicial;
+	printf("A distancia percorrida pelo automovel foi de %d km\n", distanciaPercorrida);
+	return 0;
+}
