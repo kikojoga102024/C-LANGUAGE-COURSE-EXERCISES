@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+int main() {
+	int codigo, qtdPanela, qtdChaleira, qtdVassoura;
+    qtdPanela = qtdChaleira = qtdVassoura = 0;
+	do {
+		system("cls");
+		printf("Menu de opcoes:\n\n");
+		printf("1 - Panela\n");
+		printf("2 - Chaleira\n");
+		printf("3 - Vassoura\n\n");
+		printf("Informe o codigo: ");
+		scanf_s("%d", &codigo);
+		switch (codigo) {
+		case 0:
+			printf("Encerrar programa\n");
+			break;
+		case 1:
+			printf("Panela\n");
+			qtdPanela++;
+			break;
+		case 2:
+			printf("Chaleira\n");
+			qtdChaleira++;
+			break;
+		case 3:
+			printf("Vassoura\n");
+			qtdVassoura++;
+			break;
+		case 4:
+			printf("Relatorio de entradas:\n\n");
+			printf("Panela = %d\n", qtdPanela);
+			printf("Chaleira = %d\n", qtdChaleira);
+			printf("Vassoura = %d\n", qtdVassoura);
+			break;
+		default:
+			printf("Codigo invalido\n");
+			break;
+		}
+		system("pause");
+	} while (codigo != 0);
+	return 0;
+}
