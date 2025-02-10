@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+int main() {
+	int codigo, lugaresDisponiveis, totalEntrada, totalSaida;
+	lugaresDisponiveis = 40; 
+	totalEntrada = totalSaida = 0;
+	do {
+		system("cls");
+		printf("Menu de opcoes:\n\n");
+		printf("0 - Encerrar programa\n");
+		printf("1 - Entrar uma pessoa no restaurante\n");
+		printf("2 - Sair uma pessoa do restaurante\n");
+		printf("3 - Mostrar quantos lugares estao disponiveis\n");
+		printf("4 - Mostrar o total de pessoas que entraram\n");
+		printf("5 - Mostrar o total de pessoas que sairam\n\n");
+		printf("Escolha a opcao: ");
+		scanf_s("%d", &codigo);
+		switch (codigo) {
+		case 0:
+			printf("Encerrar programa\n");
+			break;
+		case 1:
+			if (lugaresDisponiveis == 0) {
+				printf("Nao ha lugares disponiveis\n");
+			}
+			else {
+				printf("Entrada de pessoa\n");
+				lugaresDisponiveis--;
+				totalEntrada++;
+			}
+			break;
+		case 2:
+			if (lugaresDisponiveis == 40) {
+				printf("Nao ha pessoas para sair\n");
+			}
+			else {
+				printf("Saida de pessoa\n");
+				lugaresDisponiveis++;
+				totalSaida++;
+				break;
+			}
+			break;
+		case 3:
+			printf("O total de lugares disponiveis no restaurante = %d\n", lugaresDisponiveis);
+			break;
+		case 4:
+			printf("O total de pessoas que entraram no restaurante = %d\n", totalEntrada);
+			break;
+		case 5:
+			printf("O total de pessoas que sairam do restaurante = %d\n", totalSaida);
+			break;
+		default:
+			printf("Codigo invalido\n");
+			break;
+		}
+		system("pause");
+
+	} while (codigo != 0);
+	return 0;
+}
